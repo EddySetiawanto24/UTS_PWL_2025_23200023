@@ -226,7 +226,7 @@ export namespace Prisma {
   export import Exact = $Public.Exact
 
   /**
-   * Prisma Client JS version: 6.8.1
+   * Prisma Client JS version: 6.8.2
    * Query Engine version: 2060c79ba17c6bb9f5823312b6f6b7f4a845738e
    */
   export type PrismaVersion = {
@@ -2018,66 +2018,62 @@ export namespace Prisma {
 
   export type PaketAvgAggregateOutputType = {
     id: number | null
-    kode: number | null
   }
 
   export type PaketSumAggregateOutputType = {
     id: number | null
-    kode: number | null
   }
 
   export type PaketMinAggregateOutputType = {
     id: number | null
-    kode: number | null
-    name: string | null
-    description: string | null
+    kode: string | null
+    nama: string | null
+    deskripsi: string | null
   }
 
   export type PaketMaxAggregateOutputType = {
     id: number | null
-    kode: number | null
-    name: string | null
-    description: string | null
+    kode: string | null
+    nama: string | null
+    deskripsi: string | null
   }
 
   export type PaketCountAggregateOutputType = {
     id: number
     kode: number
-    name: number
-    description: number
+    nama: number
+    deskripsi: number
     _all: number
   }
 
 
   export type PaketAvgAggregateInputType = {
     id?: true
-    kode?: true
   }
 
   export type PaketSumAggregateInputType = {
     id?: true
-    kode?: true
   }
 
   export type PaketMinAggregateInputType = {
     id?: true
     kode?: true
-    name?: true
-    description?: true
+    nama?: true
+    deskripsi?: true
   }
 
   export type PaketMaxAggregateInputType = {
     id?: true
     kode?: true
-    name?: true
-    description?: true
+    nama?: true
+    deskripsi?: true
   }
 
   export type PaketCountAggregateInputType = {
     id?: true
     kode?: true
-    name?: true
-    description?: true
+    nama?: true
+    deskripsi?: true
     _all?: true
   }
 
@@ -2169,9 +2165,9 @@ export namespace Prisma {
 
   export type PaketGroupByOutputType = {
     id: number
-    kode: number
-    name: string
-    description: string
+    kode: string
+    nama: string
+    deskripsi: string
     _count: PaketCountAggregateOutputType | null
     _avg: PaketAvgAggregateOutputType | null
     _sum: PaketSumAggregateOutputType | null
@@ -2196,41 +2192,41 @@ export namespace Prisma {
   export type paketSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     kode?: boolean
-    name?: boolean
-    description?: boolean
+    nama?: boolean
+    deskripsi?: boolean
   }, ExtArgs["result"]["paket"]>
 
   export type paketSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     kode?: boolean
-    name?: boolean
-    description?: boolean
+    nama?: boolean
+    deskripsi?: boolean
   }, ExtArgs["result"]["paket"]>
 
   export type paketSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     kode?: boolean
-    name?: boolean
-    description?: boolean
+    nama?: boolean
+    deskripsi?: boolean
   }, ExtArgs["result"]["paket"]>
 
   export type paketSelectScalar = {
     id?: boolean
     kode?: boolean
-    name?: boolean
-    description?: boolean
+    nama?: boolean
+    deskripsi?: boolean
   }
 
-  export type paketOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "kode" | "name" | "description", ExtArgs["result"]["paket"]>
+  export type paketOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "kode" | "nama" | "deskripsi", ExtArgs["result"]["paket"]>
 
   export type $paketPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "paket"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
-      kode: number
-      name: string
-      description: string
+      kode: string
+      nama: string
+      deskripsi: string
     }, ExtArgs["result"]["paket"]>
     composites: {}
   }
@@ -2655,9 +2651,9 @@ export namespace Prisma {
    */
   interface paketFieldRefs {
     readonly id: FieldRef<"paket", 'Int'>
-    readonly kode: FieldRef<"paket", 'Int'>
-    readonly name: FieldRef<"paket", 'String'>
-    readonly description: FieldRef<"paket", 'String'>
+    readonly kode: FieldRef<"paket", 'String'>
+    readonly nama: FieldRef<"paket", 'String'>
+    readonly deskripsi: FieldRef<"paket", 'String'>
   }
     
 
@@ -3048,8 +3044,8 @@ export namespace Prisma {
   export const PaketScalarFieldEnum: {
     id: 'id',
     kode: 'kode',
-    name: 'name',
-    description: 'description'
+    nama: 'nama',
+    deskripsi: 'deskripsi'
   };
 
   export type PaketScalarFieldEnum = (typeof PaketScalarFieldEnum)[keyof typeof PaketScalarFieldEnum]
@@ -3170,33 +3166,33 @@ export namespace Prisma {
     OR?: paketWhereInput[]
     NOT?: paketWhereInput | paketWhereInput[]
     id?: IntFilter<"paket"> | number
-    kode?: IntFilter<"paket"> | number
-    name?: StringFilter<"paket"> | string
-    description?: StringFilter<"paket"> | string
+    kode?: StringFilter<"paket"> | string
+    nama?: StringFilter<"paket"> | string
+    deskripsi?: StringFilter<"paket"> | string
   }
 
   export type paketOrderByWithRelationInput = {
     id?: SortOrder
     kode?: SortOrder
-    name?: SortOrder
-    description?: SortOrder
+    nama?: SortOrder
+    deskripsi?: SortOrder
   }
 
   export type paketWhereUniqueInput = Prisma.AtLeast<{
     id?: number
+    kode?: string
     AND?: paketWhereInput | paketWhereInput[]
     OR?: paketWhereInput[]
     NOT?: paketWhereInput | paketWhereInput[]
-    kode?: IntFilter<"paket"> | number
-    name?: StringFilter<"paket"> | string
-    description?: StringFilter<"paket"> | string
-  }, "id">
+    nama?: StringFilter<"paket"> | string
+    deskripsi?: StringFilter<"paket"> | string
+  }, "id" | "kode">
 
   export type paketOrderByWithAggregationInput = {
     id?: SortOrder
     kode?: SortOrder
-    name?: SortOrder
-    description?: SortOrder
+    nama?: SortOrder
+    deskripsi?: SortOrder
     _count?: paketCountOrderByAggregateInput
     _avg?: paketAvgOrderByAggregateInput
     _max?: paketMaxOrderByAggregateInput
@@ -3209,9 +3205,9 @@ export namespace Prisma {
     OR?: paketScalarWhereWithAggregatesInput[]
     NOT?: paketScalarWhereWithAggregatesInput | paketScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"paket"> | number
-    kode?: IntWithAggregatesFilter<"paket"> | number
-    name?: StringWithAggregatesFilter<"paket"> | string
-    description?: StringWithAggregatesFilter<"paket"> | string
+    kode?: StringWithAggregatesFilter<"paket"> | string
+    nama?: StringWithAggregatesFilter<"paket"> | string
+    deskripsi?: StringWithAggregatesFilter<"paket"> | string
   }
 
   export type preorderCreateInput = {
@@ -3275,49 +3271,49 @@ export namespace Prisma {
   }
 
   export type paketCreateInput = {
-    kode: number
-    name: string
-    description: string
+    kode: string
+    nama: string
+    deskripsi: string
   }
 
   export type paketUncheckedCreateInput = {
     id?: number
-    kode: number
-    name: string
-    description: string
+    kode: string
+    nama: string
+    deskripsi: string
   }
 
   export type paketUpdateInput = {
-    kode?: IntFieldUpdateOperationsInput | number
-    name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
+    kode?: StringFieldUpdateOperationsInput | string
+    nama?: StringFieldUpdateOperationsInput | string
+    deskripsi?: StringFieldUpdateOperationsInput | string
   }
 
   export type paketUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
-    kode?: IntFieldUpdateOperationsInput | number
-    name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
+    kode?: StringFieldUpdateOperationsInput | string
+    nama?: StringFieldUpdateOperationsInput | string
+    deskripsi?: StringFieldUpdateOperationsInput | string
   }
 
   export type paketCreateManyInput = {
     id?: number
-    kode: number
-    name: string
-    description: string
+    kode: string
+    nama: string
+    deskripsi: string
   }
 
   export type paketUpdateManyMutationInput = {
-    kode?: IntFieldUpdateOperationsInput | number
-    name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
+    kode?: StringFieldUpdateOperationsInput | string
+    nama?: StringFieldUpdateOperationsInput | string
+    deskripsi?: StringFieldUpdateOperationsInput | string
   }
 
   export type paketUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
-    kode?: IntFieldUpdateOperationsInput | number
-    name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
+    kode?: StringFieldUpdateOperationsInput | string
+    nama?: StringFieldUpdateOperationsInput | string
+    deskripsi?: StringFieldUpdateOperationsInput | string
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -3456,32 +3452,30 @@ export namespace Prisma {
   export type paketCountOrderByAggregateInput = {
     id?: SortOrder
     kode?: SortOrder
-    name?: SortOrder
-    description?: SortOrder
+    nama?: SortOrder
+    deskripsi?: SortOrder
   }
 
   export type paketAvgOrderByAggregateInput = {
     id?: SortOrder
-    kode?: SortOrder
   }
 
   export type paketMaxOrderByAggregateInput = {
     id?: SortOrder
     kode?: SortOrder
-    name?: SortOrder
-    description?: SortOrder
+    nama?: SortOrder
+    deskripsi?: SortOrder
   }
 
   export type paketMinOrderByAggregateInput = {
     id?: SortOrder
     kode?: SortOrder
-    name?: SortOrder
-    description?: SortOrder
+    nama?: SortOrder
+    deskripsi?: SortOrder
   }
 
   export type paketSumOrderByAggregateInput = {
     id?: SortOrder
-    kode?: SortOrder
   }
 
   export type DateTimeFieldUpdateOperationsInput = {
